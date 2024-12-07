@@ -51,11 +51,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'my_game_store.urls'
-
+import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'task1/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

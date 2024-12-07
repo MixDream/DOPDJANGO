@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игры</title>
+</head>
+<body>
+    <h1>Игры</h1>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/platform/games/">Магазин</a>
+        <a href="/platform/cart/">Корзина</a>
+    </nav>
+    <div>
+        {% for game in games %}
+            <p>{{ game.title }} | {{ game.description }}. Стоимость: {{ game.cost }} <button>Купить</button></p>
+        {% endfor %}
+    </div>
+</body>
+</html>
