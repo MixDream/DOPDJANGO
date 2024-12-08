@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, games_list, cart, registration
+from my_game_store import cart,games_list,index,registration
 
 urlpatterns = [
     path('', index, name='index'),

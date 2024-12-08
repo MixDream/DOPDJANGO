@@ -20,7 +20,7 @@ def registration(request):
             return redirect('index')
     return render(request, 'registration.html')
 from django.shortcuts import render
-from .models import Post
+from my_game_store.task1.models import Post
 
 def create_posts(request):
     Post.objects.create(title='Первая статья', content='Содержание первой статьи', published_date='2024-01-01')
