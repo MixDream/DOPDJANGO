@@ -12,12 +12,12 @@ class Buyer(models.Model):
         return self.name
 
 class Game(models.Model):
-    title = models.CharField(max_length=200)
-    cost = models.DecimalField(max_digits=10, decimal_places=2)
-    size = models.DecimalField(max_digits=10, decimal_places=2)
+    title = models.CharField(max_length=100)
     description = models.TextField()
-    age_limited = models.BooleanField(default=False)
-    buyers = models.ManyToManyField(Buyer, related_name='games')
+    cost = models.DecimalField(max_digits=10, decimal_places=2)
+    age_limited = models.IntegerField()
+    size = models.CharField(max_length=50)
+    buyers = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title

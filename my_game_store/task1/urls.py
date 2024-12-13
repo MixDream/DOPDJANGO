@@ -1,6 +1,5 @@
 from django.urls import path
-from my_game_store import cart,games_list,index,registration
-
+from .templates import cart, games_list, index, registration
 urlpatterns = [
     path('', index, name='index'),
     path('games/', games_list, name='games_list'),
