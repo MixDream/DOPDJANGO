@@ -1,15 +1,12 @@
 from django.urls import path
-from .templates import cart, games_list, index, registration
-urlpatterns = [
-    path('', index, name='index'),
-    path('games/', games_list, name='games_list'),
-    path('cart/', cart, name='cart'),
-    path('registration/', registration, name='registration'),
-]
-from django.urls import path
-from . import views
+import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
+    path('games/', views.games_list, name='games_list'),
+    path('cart/', views.cart, name='cart'),
+    path('registration/', views.registration, name='registration'),
+    # Добавьте дополнительные пути для других представлений
     path('create/', views.create_posts, name='create_posts'),
     path('update/<int:post_id>/', views.update_post, name='update_post'),
     path('list/', views.list_posts, name='list_posts'),

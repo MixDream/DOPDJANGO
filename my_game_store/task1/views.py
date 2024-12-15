@@ -2,15 +2,21 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render, redirect
-from .models import Buyer, Game
+from my_game_store.task1.models import Buyer, Game
+
+from django.shortcuts import render
+
 def index(request):
     return render(request, 'index.html')
+
 def games_list(request):
-    games = Game.objects.all()
-    return render(request, 'games.html', {'games': games})
+    return render(request, 'games_list.html')
+
 def cart(request):
     return render(request, 'cart.html')
+
 def registration(request):
+    return render(request, 'registration.html')
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
